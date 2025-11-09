@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0"/>
+    <title>Movie & TV Show Manager</title>
+    <link rel="stylesheet" href="movie_and_tv_show_manager_style.css">
+</head>
+<body>
+    <header>
+        <h1>Movie & TV Show Manager</h1>
+        <nav>
+            <input type="text" id="search-bar" placeholder="Your movie or tv show title here..." />
+            <button id="add-title-button"> Add Title</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="most-popular">
+            <h2> Most Popular</h2>
+            <div class="title-grid" id="popular-list">
+            </div>
+        </section>
+
+        <section id="similar-titles">
+            <h2> Movies & Shows Sorted by Similarity</h2>
+            <p> Select a title to find similar shows and movies</p>
+            <select id="similarity-selector"></select>
+            <div class="title-grid" id="similar-list">
+            </div>
+        </section>
+
+        <section id="pesonalized-list">
+            <h2> My List</h2>
+            <div class="title-grid" id="personal-list">
+            </div>
+        </section>
+
+        <section id="add-title-form" style="display:inline">
+            <form id="title-form">
+            <h2> Add a new title</h2>
+            <div class="title-grid" id="personal-list">
+            <label for="title-name">Title:</label>
+            <input type="text" id="title-name" name="title-name" required/>
+
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+                <option value="movie">Movie</option>
+                <option value="tv">TV Show</option>
+            </select>
+
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre"/>
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year"/>
+
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" step="0.1" min="0" max="5"/>
+
+            <button type="submit">Save</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Movie & TV Show Manager</p>
+    </footer>
+   <script src="movie_and_tv_show_manager_script.js"></script>
+</body>
+</html>
